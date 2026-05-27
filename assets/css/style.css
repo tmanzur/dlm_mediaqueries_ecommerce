@@ -27,7 +27,7 @@ a:hover{
     min-height: 100dvh;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 10% 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "navbar"
         "search"
@@ -62,9 +62,31 @@ a:hover{
 
 .search {
     grid-area: search;
+    background-color: #7BA67B;
+    color: #F5F0E8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 
     border: 1px solid orange;
-    padding: 10px;
+    padding: 0.8rem 0.5rem;
+}
+
+.search h5{
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.desplegable{
+    position: relative;
+    padding: 0.25rem;
+    
+width: 80%;
+background-color: #F5F0E8;
+color: #191C2A;
+font-size: 0.8rem;
+border-radius: 5px;
 }
 
 .container {
@@ -91,8 +113,6 @@ a:hover{
     .menu ul {
         display: none;
     }
-
-     
 
 }
 
