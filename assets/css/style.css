@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    background-color: #191C2A;
+    color: #F5F0E8;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #F5F0E8;
+}
+
+a:hover{
+    color: #F0A500;
+}
+
+.grid-container {
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 10% 1fr auto;
+    grid-template-areas:
+        "navbar"
+        "search"
+        "main"
+        "footer"
+    ;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #191C2A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+
+    border: 1px solid blue;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.img-navbar {
+    max-width: 80px;
+}
+
+.logo em {
+    color: #F0A500;
+}
+
+.search {
+    grid-area: search;
+
+    border: 1px solid orange;
+    padding: 10px;
+}
+
+.container {
+    grid-area: main;
+
+    border: 1px solid green;
+    padding: 10px;
+}
+
+.foot {
+    grid-area: footer;
+    background-color: #F0A500;
+    color: #191C2A;
+    text-align: center;
+        padding: 1rem;
+
+    border: 1px solid red;
+
+}
+
+
+/* SMALL */
+@media (max-width: 576px) {
+    .menu ul {
+        display: none;
+    }
+
+     
+
+}
+
+/* XL */
+
+@media (min-width: 576px) {
+    .grid-container {
+        grid-template-columns: 20% 1fr;
+        grid-template-rows: 6rem 1fr 15%;
+        grid-template-areas:
+            "navbar search"
+            "navbar main"
+            "footer main"
+        ;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .logo {
+        height: 6rem;
+        border: 1px solid salmon;
+    }
+
+    .menu i {
+        display: none;
+    }
+
+    .menu-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        padding-top: 3rem;
+    }
+
+
+}
