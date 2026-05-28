@@ -95,9 +95,7 @@ a:hover {
     grid-area: main;
     display: flex;
     flex-direction: column;
-
-    border: 1px solid green;
-    padding: 10px;
+    padding: 1.5rem 0.75rem;
 }
 
 .boxes{
@@ -123,9 +121,6 @@ a:hover {
     background-color: #F5F0E8;
     color: #191C2A;
     font-family: Fraunces, sans-serif;
-
-
-    border: 1px solid green;
 }
 
 .img-box{
@@ -148,7 +143,13 @@ a:hover {
 
 .container-pag{
     margin-top: auto;
-    border: 1px solid blue;
+    padding: 10px;
+}
+
+.btn-pag{
+    padding: 5px;
+    background-color: #C8CDD8;
+    color: #191C2A;
 }
 
 /* Footer */
@@ -158,8 +159,6 @@ a:hover {
     color: #191C2A;
     text-align: center;
     padding: 1rem;
-
-    border: 1px solid red;
 
 }
 
@@ -177,7 +176,7 @@ a:hover {
 @media (min-width: 576px) {
     .grid-container {
         grid-template-columns: 20% 1fr;
-        grid-template-rows: 6rem 1fr 15%;
+        grid-template-rows: 6rem 1fr auto;
         grid-template-areas:
             "navbar search"
             "navbar main"
@@ -193,7 +192,6 @@ a:hover {
 
     .logo {
         height: 6rem;
-        border: 1px solid salmon;
     }
 
     .menu i {
