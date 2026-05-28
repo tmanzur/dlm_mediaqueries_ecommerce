@@ -35,32 +35,43 @@ a:hover {
         "search"
         "main"
         "footer"
-        ;
-    }
-    
-    /* Navbar */
-    .navbar {
-        grid-area: navbar;
-        background-color: #191C2A;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 1rem;
-    }
-    
-    .logo {
-        display: flex;
-        align-items: center;
-    }
-    
-    .img-navbar {
-        max-width: 80px;
-    }
-    
-    .logo em {
-        color: #F0A500;
-        font-size: 2rem;
-    }
+    ;
+}
+
+/* Navbar */
+.navbar {
+    grid-area: navbar;
+    background-color: #191C2A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-items {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.img-navbar {
+    max-width: 80px;
+}
+
+.logo em {
+    color: #F0A500;
+    font-size: 2rem;
+}
+
+.menu ul {
+    display: none;
+}
 
 /* Header */
 .search {
@@ -102,7 +113,7 @@ a:hover {
     background-color: #F5F0E8;
 }
 
-.boxes{
+.boxes {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,13 +121,13 @@ a:hover {
     gap: 20px;
 }
 
-.product-boxes{
+.product-boxes {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
 }
 
-.box{
+.box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,34 +137,34 @@ a:hover {
     color: #191C2A;
     border: 1px solid #7BA67B;
     border-radius: 5px;
-    font-family: Fraunces, sans-serif;
+    font-family: Fraunces, serif;
 }
 
-.img-box{
+.img-box {
     height: 12rem;
     max-width: 16rem;
 }
 
-.btn-box{
+.btn-box {
     padding: 0.6rem 1.5rem;
     background-color: #7BA67B;
     border: 1px solid #191C2A;
     color: #F5F0E8;
     border-radius: 5px;
-    font-family: Fraunces, sans-serif;   
+    font-family: Fraunces, serif;
 }
 
-.btn-box:hover{
+.btn-box:hover {
     background-color: #191C2A;
     color: #F5F0E8;
 }
 
-.container-pag{
+.container-pag {
     margin-top: auto;
     padding: 10px;
 }
 
-.btn-pag{
+.btn-pag {
     padding: 7px;
     background-color: #7BA67B;
     color: #F5F0E8;
@@ -174,17 +185,20 @@ a:hover {
 }
 
 
-/* SMALL */
-@media (max-width: 576px) {
-    .menu ul {
-        display: none;
+/* MEDIUM */
+@media (min-width: 576px) {
+    .product-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 10px;
     }
 
 }
 
 /* XL */
 
-@media (min-width: 576px) {
+@media (min-width: 992px) {
     .grid-container {
         grid-template-columns: 20% 1fr;
         grid-template-rows: 6rem 1fr auto;
@@ -201,12 +215,19 @@ a:hover {
         justify-content: start;
     }
 
+    .navbar-items {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+
     .logo {
         height: 6rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        gap: 25px;
+        gap: 10px;
     }
 
     .menu i {
@@ -220,12 +241,12 @@ a:hover {
         padding-top: 3rem;
     }
 
-    .product-boxes{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
-    row-gap: 10px;
-}
+    .product-boxes {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 20px;
+        row-gap: 10px;
+    }
 
 
 }
