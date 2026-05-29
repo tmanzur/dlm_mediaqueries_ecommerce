@@ -26,7 +26,7 @@ a:hover {
 }
 
 .grid-container {
-    min-height: 100dvh;
+    height: 100dvh;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 1fr 80px;
@@ -69,7 +69,7 @@ a:hover {
     font-size: 2rem;
 }
 
-.menu ul {
+.menu-links {
     display: none;
 }
 
@@ -111,6 +111,7 @@ a:hover {
     flex-direction: column;
     padding: 24px 12px;
     background-color: #F5F0E8;
+    overflow: hidden;
 }
 
 .boxes {
@@ -119,12 +120,16 @@ a:hover {
     align-items: center;
     flex: 1;
     gap: 20px;
+    overflow: hidden;
 }
 
 .product-boxes {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 20px;
+    overflow-y: auto;
+    flex: 1;
+    padding: 0 1rem;
 }
 
 .box {
