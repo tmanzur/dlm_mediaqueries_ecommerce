@@ -11,13 +11,14 @@ ___
 
 ## Vista previa 👀
 Versión Mobile:
-![alt text](image-2.png)
-
-Versión Desktop:
 ![alt text](image.png)
 
-Versión Tablet:
+Versión Desktop:
 ![alt text](image-1.png)
+
+Versión Tablet:
+![alt text](image-2.png)
+
 ___
 
 ## Tecnologías utilizadas 👩🏻‍💻
